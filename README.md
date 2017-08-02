@@ -6,6 +6,6 @@ ionic serve
 
 ## Demo
 
-![demo-ionic-3-sidemenu-tabs](http://imgur.com/a/WpPn2)
+![demo-ionic-3-sidemenu-tabs](http://i.imgur.com/kElxDFB.gif)
 
 reference doc https://devdactic.com/ionic-side-menu-tabs/
