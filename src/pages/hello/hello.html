@@ -1,15 +1,22 @@
 <ion-header>
   <ion-navbar>
-    <ion-buttons start>
-      <button ion-button menuToggle>
+    <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    </ion-buttons>
-    <ion-title>hello</ion-title>
+    <ion-title>Consommations</ion-title>
   </ion-navbar>
 </ion-header>
 
 
 <ion-content padding>
-
+<h4>Les consommations {{num}}</h4>
+    <ion-list>
+        <ion-item>Conso 1 de {{num}}</ion-item>
+        <ion-item>Conso 2 de {{num}}</ion-item>
+        <ion-item>Conso 3 de {{num}}</ion-item>
+        <ion-item>Conso 4 de {{num}}</ion-item>
+    </ion-list>
+    <button [disabled]="noNext" ion-button full color="secondary" (click)="nextConso()">
+        Next
+    </button>
 </ion-content>

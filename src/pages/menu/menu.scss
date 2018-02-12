@@ -1,3 +1,35 @@
+@import url("../../theme/variables.scss");
+
 page-menu {
 
 }
+
+.selectedPage {
+  background-color: #d6eaf8;
+}
+
+ion-header.header {
+  background-image: url('../../assets/imgs/bgprofile.JPG');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.activePage {
+  background-color: #ebf5fb;
+}
+
+ion-header .profile {
+  background-color: hsla(210, 29%, 13%, 0.34);
+  /*background: none;*/
+}
+
+h4.username {
+  color: #f7f9f9;
+  font-weight: bold;
+}
+
+p.email {
+  color: #f7f9f9;
+}
+

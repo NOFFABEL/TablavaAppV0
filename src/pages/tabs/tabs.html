@@ -1,5 +1,8 @@
-<ion-tabs [selectedIndex]="myIndex">
-  <ion-tab [root]="tab1Root" tabTitle="Tab 1" tabIcon="home"></ion-tab>
-  <ion-tab [root]="tab2Root" tabTitle="Tab 2" tabIcon="contacts"></ion-tab>
-  <ion-tab [root]="tab2Root" tabTitle="Tab 2" tabIcon="contacts" show=false></ion-tab >
+
+
+<ion-tabs [selectedIndex]="myIndex" id="nav_tablava">
+  <ion-tab [root]="homeRoot" tabTitle="Acceuil" tabIcon="home"></ion-tab>
+  <ion-tab [root]="consoRoot" tabTitle="Conso" tabIcon="eye"></ion-tab>
+  <ion-tab [root]="historicRoot" tabTitle="Historical" tabIcon="book"></ion-tab >
+  <ion-tab [root]="notifRoot" tabTitle="notif" tabIcon="notifications"></ion-tab >
 </ion-tabs>

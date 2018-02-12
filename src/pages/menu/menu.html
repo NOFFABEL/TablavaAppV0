@@ -1,19 +1,55 @@
+
 <ion-menu [content]="content">
-  <ion-header>
-    <ion-toolbar>
-      <ion-title>Menu</ion-title>
-    </ion-toolbar>
+  <ion-header  class="header">
+    <ion-item class="profile">
+      <ion-avatar class="avatar" item-start>
+        <img src="../../assets/imgs/profile.JPG"/>
+      </ion-avatar>
+      <h4 class="username">NOFFABEL</h4>
+      <p class="email">noffabel12@gmail.com</p>
+    </ion-item>
   </ion-header>
 
+
   <ion-content>
-    <ion-list>
-      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-      	<ion-icon item-start [name]="p.icon" [color]="isActive(p)"></ion-icon>
-        {{p.title}}
-      </button>
+
+    <ion-list class="washerlist">
+      <ion-list-header> All your Washer</ion-list-header>
+      <ol>
+        <li>
+          <span>M1</span>
+          <p>date M2</p>
+        </li>
+        <li>
+          <span>M2</span>
+          <p>date M2</p>
+        </li>
+      </ol>
     </ion-list>
+    <hr />
+    <div #menu>
+      <ion-list>
+        <button menuClose ion-item *ngFor="let p of pages_menu" [class.selectedPage]="selectedPage(p)" (click)="openPage(p)">
+          <ion-icon [name]="p.icon" [color]="isActive(p)" item-start></ion-icon><span>{{p.title}}</span>
+        </button>
+      </ion-list>
+      <hr/>
+      <ion-list>
+        <button menuClose ion-item *ngFor="let p of pages" [class.selectedPage]="selectedPage(p)" (click)="newWasher(p)">
+          <ion-icon [name]="p.icon" [color]="isActive(p)" item-start></ion-icon><span>{{p.title}}</span>
+        </button>
+      </ion-list>
+      <hr/>
+      <ion-list>
+        <button menuClose ion-item (click)="logout()">
+          <ion-icon item-start name="log-out" color="danger"></ion-icon><span color="danger">Deconnexion</span>
+        </button>
+      </ion-list>
+    </div>
+
   </ion-content>
 
 </ion-menu>
 
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
 <ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

@@ -3,16 +3,26 @@ import { Tab1Page } from './../tab1/tab1';
 
 
 import { Component } from '@angular/core';
-import { NavParams } from 'ionic-angular';
- 
+import {IonicPage, MenuController, NavParams} from 'ionic-angular';
+import {HelloPage} from "../hello/hello";
+import {HomePage} from "../home/home";
+import {SpecialPage} from "../special/special";
+import {ListPage} from "../list/list";
+import {MenuPage} from "../menu/menu";
+
+@IonicPage({
+  name: 'tabs-page'
+})
 @Component({
   selector: 'page-tabs',
   templateUrl: 'tabs.html',
 })
 export class TabsPage {
  
-  tab1Root: any = Tab1Page;
-  tab2Root: any = Tab2Page;
+  homeRoot: any = HomePage;
+  consoRoot: any = HelloPage;
+  historicRoot:any = SpecialPage;
+  notifRoot:any = ListPage;
   myIndex: number;
 
   hideNavBar:boolean = false;
@@ -22,4 +32,6 @@ export class TabsPage {
     this.myIndex = navParams.data.tabIndex || 0;
     this.hideNavBar = true;
   }
+
+
 }

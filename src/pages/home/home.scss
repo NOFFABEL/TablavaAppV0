@@ -1,3 +1,37 @@
+@import url("../../theme/variables.scss");
+
 page-home {
 
+}
+
+.tabshead {
+  height: auto;
+  padding: 2% 2%;
+  box-shadow: 0 0 4px #999;
+  border-radius: 10px 0 10px 0;
+}
+
+.start-btn {
+  height: 85px;
+  width: 85px;
+  padding: 5px;
+  border-radius: 50%;
+  border: none;
+  box-shadow: 4px 4px 8px #aaaaaa;
+  background-color: #488aff;
+  font: Bold 14px Arial;
+  color: #ffffff;
+  text-align: center;
+}
+
+.timer {
+  height: 70px;
+  width: 70px;
+  padding: 5px;
+  border-radius: 60%;
+  font: Bold 14px Arial;
+  color: #ffffff;
+  border: none;
+  background-color: #bad1ff;
+  text-align: center;
 }

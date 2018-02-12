@@ -9,7 +9,18 @@
 
 
 <ion-content padding>
-
+    <form class="tabshead" [formGroup]="progsForm">
+        <ion-row align-items-start>
+            <ion-col>
+                <button class="start-btn" [disabled]="isRunning()" (click)="launch()">START</button>
+            </ion-col>
+            <ion-col>
+                <div  class="timer">
+                    <ion-label *ngIf="isRunning(); else noWay">{{timer.minutes}}:{{timer.secondes}}</ion-label>
+                    <ng-template #noWay>Timer</ng-template>
+                </div>
+            </ion-col>
+        </ion-row>
+    </form>
 	<h3>Landing page / Home page</h3>
-
 </ion-content>

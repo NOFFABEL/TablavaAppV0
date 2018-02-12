@@ -14,18 +14,23 @@ import { SpecialPage } from '../pages/special/special';
 
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
+import { HelloPage } from "../pages/hello/hello";
+import { TabsheadPage } from "../pages/tabshead/tabshead";
+import {WasherPage} from "../pages/washer/washer";
 
 @NgModule({
   declarations: [
     MyApp,
     LoginPage,
     MenuPage,
-    TabsPage,
     Tab1Page,
     Tab2Page,
     SpecialPage,
     HomePage,
-    ListPage
+    HelloPage,
+    ListPage,
+    TabsheadPage,
+    WasherPage
   ],
   imports: [
     BrowserModule,
@@ -36,12 +41,14 @@ import { ListPage } from '../pages/list/list';
     MyApp,
     LoginPage,
     MenuPage,
-    TabsPage,
     Tab1Page,
     Tab2Page,
     SpecialPage,
     HomePage,
-    ListPage
+    ListPage,
+    HelloPage,
+    TabsheadPage,
+    WasherPage
   ],
   providers: [
     StatusBar,
